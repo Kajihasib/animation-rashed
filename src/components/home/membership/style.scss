@@ -1,0 +1,120 @@
+@import '../../../assets/css/mixins.scss';
+
+.membershipArea {
+	padding: 80px 290px 180px 170px;
+	position: relative;
+	z-index: 1;
+
+	@media (max-width: 1550px) {
+		padding: 80px 220px 180px 220px;
+	}
+	@media (max-width: 1200px) {
+		padding: 80px 55px 90px;
+	}
+	@media (max-width: 767px) {
+		padding: 80px 15px;
+	}
+	.membershipBg {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 690px;
+		background: #ebfaff;
+		z-index: -1;
+		min-height: 100%;
+		@media (max-width: 1200px) {
+			width: 40%;
+		}
+	}
+}
+.membarshipTitile {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 55px;
+	align-items: flex-start;
+	margin-bottom: 150px;
+	@media (max-width: 1200px) {
+		margin-bottom: 70px;
+	}
+	@media (max-width: 767px) {
+		padding-left: 0;
+		flex-wrap: wrap;
+	}
+	h2 {
+		font-family: $normalFontFamily;
+		font-size: 90px;
+		line-height: 100px;
+		font-weight: 700;
+		max-width: 790px;
+		margin-bottom: 0;
+		@media (max-width: 1200px) {
+			font-size: 50px;
+			line-height: 55px;
+			max-width: 60%;
+		}
+		@media (max-width: 991px) {
+			font-size: 40px;
+			line-height: 46px;
+			max-width: 60%;
+		}
+		@media (max-width: 767px) {
+			max-width: 100%;
+			font-size: 30px;
+			line-height: 36px;
+		}
+	}
+	.joinBtn {
+		margin-top: 20px;
+	}
+}
+.memberItems {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -75px;
+	@media (max-width: 1550px) {
+		margin: 0px -60px;
+	}
+	@media (max-width: 1200px) {
+		margin: 0px -50px;
+	}
+	@media (max-width: 991px) {
+		margin: 0px -15px;
+	}
+	.memberItem {
+		width: 33.33%;
+		margin-bottom: 50px;
+		padding: 0px 75px;
+		@media (max-width: 1550px) {
+			padding: 0px 60px;
+		}
+		@media (max-width: 1200px) {
+			margin-bottom: 30px;
+			padding: 0px 50px;
+		}
+		@media (max-width: 991px) {
+			padding: 0px 15px;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+		.memberWrap {
+			img {
+				margin-bottom: 30px;
+			}
+			h4 {
+				text-transform: uppercase;
+				font-family: $normalFontFamily;
+				font-size: 14px;
+				letter-spacing: 0.08em;
+				line-height: 20px;
+				font-weight: 900;
+				margin-bottom: 15px;
+			}
+			p {
+				margin-bottom: 0;
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+	}
+}

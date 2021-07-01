@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'DIN 30640 Std';
+	src: url('DINNeuzeitGroteskStd-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NeuzeitGroteskCondW01';
+	src: url('NeuzeitGroteskCondW01-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NeuzeitS-Book';
+	src: url('NeuzeitS-Book.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NeuzeitGroteskW01';
+	src: url('NeuzeitGroteskW01-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

@@ -1,0 +1,148 @@
+@import '../../assets/css/mixins.scss';
+
+.header-area {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 0;
+	width: 100%;
+	padding: 27px 20px 0px;
+	z-index: 11;
+	display: flex;
+	align-items: center;
+	max-width: 1680px;
+	@media (max-width: 1200px) {
+		width: 100%;
+		max-width: 100%;
+		justify-content: space-between;
+	}
+	@media (max-width: 767px) {
+		padding: 27px 20px 0px 85px;
+	}
+}
+.responsive-trigger {
+	display: none;
+	@media (max-width: 767px) {
+		display: inline-block;
+		cursor: pointer;
+		img {
+			height: 20px;
+		}
+	}
+}
+
+.mainmenu {
+	width: 1125px;
+	justify-content: flex-end;
+	padding-right: 100px;
+	@media (max-width: 1200px) {
+		width: 70%;
+	}
+	@media (max-width: 991px) {
+		padding-right: 50px;
+	}
+	@media (max-width: 767px) {
+		padding-right: 0;
+		position: absolute;
+		left: 75px;
+		width: calc(100% - 75px);
+		top: 100%;
+		padding: 15px;
+		background: $textColor;
+		z-index: 11;
+		transition: all 0.4s ease-in-out 0s;
+		visibility: hidden;
+		transform: scaleY(0);
+		transform-origin: top;
+		opacity: 0;
+		&.active {
+			visibility: visible;
+			opacity: 1;
+			transform: scaleY(1);
+		}
+		li {
+			width: 100%;
+			line-height: 28px;
+			a {
+				color: #fff;
+				&:hover {
+					color: $themeColor;
+				}
+			}
+		}
+	}
+	li {
+		margin-right: 30px;
+		@media (max-width: 991px) {
+			margin-right: 20px;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			display: block;
+			font-size: 18px;
+			@media (max-width: 991px) {
+				font-size: 16px;
+			}
+		}
+	}
+}
+.loginSignupMenu {
+	width: calc(100% - 1125px);
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	@media (max-width: 1200px) {
+		width: 30%;
+	}
+	@media (max-width: 767px) {
+		width: 90%;
+	}
+	li {
+		margin-right: 30px;
+		&:last-child {
+			margin-right: 0;
+		}
+		@media (max-width: 767px) {
+			margin-right: 15px;
+		}
+		a {
+			&.loginBtn {
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 27px;
+				color: $textColor;
+				border-bottom: 1px solid $textColor;
+				display: block;
+				@media (max-width: 767px) {
+					font-size: 16px;
+				}
+				&:hover {
+					color: $themeColor;
+					border-color: $themeColor;
+				}
+			}
+			&.signupBtn {
+				min-height: 45px;
+				min-width: 145px;
+				background: $themeColor;
+				color: #fff;
+				border-radius: 30px;
+				border: 2px solid $themeColor;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 700;
+				@media (max-width: 767px) {
+					min-width: 125px;
+					font-size: 14px;
+				}
+				&:hover {
+					background: transparent;
+					color: $themeColor;
+				}
+			}
+		}
+	}
+}

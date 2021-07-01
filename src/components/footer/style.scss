@@ -1,0 +1,126 @@
+@import '../../assets/css/mixins.scss';
+.footerArea {
+	padding: 150px 0px 100px 85px;
+	position: relative;
+	z-index: 1;
+	@media (max-width: 1200px) {
+		padding: 100px 0px 55px 55px;
+	}
+	@media (max-width: 767px) {
+		padding: 80px 15px 55px 15px;
+	}
+	.footerBg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.footerJoinNow {
+		z-index: 11;
+		right: 503px;
+		@media (max-width: 1200px) {
+			right: 270px;
+			bottom: 20px;
+		}
+		@media (max-width: 991px) {
+			right: 50px;
+		}
+		@media (max-width: 767px) {
+			right: 15px;
+		}
+	}
+}
+.footerTitle {
+	color: #fff;
+	font-weight: bold;
+	font-size: 90px;
+	line-height: 99px;
+	font-family: $normalFontFamily;
+	max-width: 600px;
+	margin-bottom: 20px;
+	@media (max-width: 1200px) {
+		font-size: 50px;
+		line-height: 55px;
+		max-width: 400px;
+	}
+	@media (max-width: 991px) {
+		max-width: unset;
+	}
+	@media (max-width: 767px) {
+		font-size: 35px;
+		line-height: 40px;
+	}
+}
+.footerText {
+	font-size: 22px;
+	line-height: 33px;
+	margin-bottom: 210px;
+	@media (max-width: 1200px) {
+		margin-bottom: 40px;
+		font-size: 20px;
+		line-height: 26px;
+	}
+}
+.footerForm {
+	background: #ffffff;
+	border-radius: 20px;
+	max-width: 675px;
+	width: 675px;
+	padding: 50px 40px 20px;
+	margin-bottom: 35px;
+	@media (max-width: 1200px) {
+		width: 450px;
+	}
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}
+.footerInput {
+	margin-bottom: 30px;
+	position: relative;
+	input {
+		width: 100%;
+		height: 40px;
+		border: none;
+		border-bottom: 1px solid #777def;
+		&::placeholder {
+			opacity: 1;
+			font-size: 22px;
+			color: $textColor;
+			@media (max-width: 767px) {
+				font-size: 16px;
+			}
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	img {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.footerImg {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	img {
+		border-radius: 20px 0px 0px 0px;
+		@media (max-width: 1200px) {
+			height: 500px;
+		}
+	}
+	@media (max-width: 991px) {
+		display: none;
+	}
+}

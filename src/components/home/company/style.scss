@@ -1,0 +1,129 @@
+@import '../../../assets/css/mixins.scss';
+.companyArea {
+	padding: 130px 160px 150px 85px;
+	background: linear-gradient(0deg, #ebfaff, #ebfaff);
+	@media (max-width: 1200px) {
+		padding: 100px 55px 100px 55px;
+	}
+	@media (max-width: 767px) {
+		padding: 80px 15px;
+	}
+}
+.companyContent {
+	max-width: 670px;
+	margin-left: 775px;
+	@media (max-width: 1200px) {
+		margin-left: 350px;
+	}
+	@media (max-width: 991px) {
+		margin-left: 180px;
+	}
+	@media (max-width: 767px) {
+		margin-left: 0;
+		max-width: 100%;
+	}
+	h2 {
+		font-size: 90px;
+		font-family: $normalFontFamily;
+		font-weight: bold;
+		line-height: 99px;
+		margin-bottom: 40px;
+		@media (max-width: 1200px) {
+			font-size: 60px;
+			line-height: 65px;
+			margin-bottom: 25px;
+		}
+		@media (max-width: 991px) {
+			font-size: 40px;
+			line-height: 45px;
+		}
+	}
+	p {
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 40px;
+		max-width: 90%;
+		@media (max-width: 1200px) {
+			margin-bottom: 20px;
+			max-width: 95%;
+		}
+	}
+}
+.companyitems {
+	margin-top: 295px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@media (max-width: 991px) {
+		justify-content: flex-start;
+		margin-top: 450px;
+	}
+	@media (max-width: 767px) {
+		margin-top: 0;
+	}
+	li {
+		width: calc(20% - 20px);
+		margin-right: 20px;
+		@media (max-width: 991px) {
+			width: calc(33.33% - 20px);
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+			margin-top: 30px;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&.companyWrap1 {
+			margin-top: -500px;
+			@media (max-width: 767px) {
+				margin-top: 30px;
+			}
+		}
+		&.companyWrap2 {
+			margin-top: -375px;
+			@media (max-width: 767px) {
+				margin-top: 30px;
+			}
+		}
+		&.companyWrap3 {
+			margin-top: -250px;
+			@media (max-width: 767px) {
+				margin-top: 30px;
+			}
+		}
+		&.companyWrap4 {
+			margin-top: -125px;
+			@media (max-width: 767px) {
+				margin-top: 30px;
+			}
+		}
+		.companyImg {
+			display: inline-block;
+			background: #fff;
+			border-radius: 50%;
+			margin-bottom: 25px;
+			img {
+				height: 110px;
+				width: 110px;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+		p {
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 25px;
+		}
+		strong {
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-family: $normalFontFamily;
+
+			.subName {
+				font-weight: 400;
+			}
+		}
+	}
+}

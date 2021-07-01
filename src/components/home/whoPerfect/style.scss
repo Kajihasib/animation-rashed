@@ -1,0 +1,142 @@
+@import '../../../assets/css/mixins.scss';
+
+.whoPerfectArea {
+	background: #ebfaff;
+	padding: 115px 140px 0px 140px;
+	@media (max-width: 1200px) {
+		padding: 100px 55px 0px;
+	}
+	@media (max-width: 767px) {
+		padding: 80px 15px 0px;
+	}
+}
+.whoPerfectContent {
+	max-width: 810px;
+	margin: 0px auto 80px;
+	text-align: center;
+	@media (max-width: 991px) {
+		max-width: 100%;
+	}
+	h2 {
+		font-size: 46px;
+		line-height: 50px;
+		font-family: $normalFontFamily;
+		font-weight: 900;
+		margin: 0px auto 30px;
+		max-width: 70%;
+		@media (max-width: 991px) {
+			font-size: 30px;
+			line-height: 35px;
+			margin: 0px auto 20px;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+			font-size: 24px;
+			line-height: 30px;
+		}
+	}
+	p {
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 25px;
+		@media (max-width: 991px) {
+			margin-bottom: 15px;
+		}
+	}
+}
+.whoVideoItems {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	li {
+		margin-right: 20px;
+		width: calc(33.33% - 20px);
+		position: relative;
+		z-index: 1;
+		border-radius: 20px 20px 0px 0px;
+		overflow: hidden;
+		line-height: 0px;
+		@media (max-width: 991px) {
+			width: calc(50% - 20px);
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+			margin-right: 0;
+		}
+		video {
+			width: 100%;
+			border-radius: 20px 20px 0px 0px;
+		}
+		.videoBg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.6;
+		}
+		.videobarBg {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 9px;
+			width: 100%;
+			z-index: 11;
+		}
+		.whoVideoContnet {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 100%;
+			min-height: 100%;
+			padding: 40px 45px 50px;
+			@media (max-width: 1550px) {
+				padding: 40px 30px 50px;
+			}
+			@media (max-width: 1200px) {
+				padding: 30px 25px 40px;
+			}
+			h4 {
+				font-size: 22px;
+				line-height: 33px;
+				color: #fff;
+				margin-bottom: 0;
+				font-weight: 400;
+				font-family: $normalFontFamily;
+				@media (max-width: 1200px) {
+					font-size: 20px;
+					line-height: 26px;
+				}
+			}
+			.contentType {
+				min-height: 50px;
+				width: 100%;
+				background: #fff;
+				border-radius: 40px;
+				display: flex;
+				align-items: center;
+				padding: 5px 25px;
+				font-size: 16px;
+				line-height: 24px;
+				@media (max-width: 1200px) {
+					padding: 5px 20px;
+					font-size: 14px;
+					line-height: 18px;
+				}
+				&.removeCursor {
+					span {
+						display: none !important;
+					}
+				}
+			}
+		}
+	}
+}
