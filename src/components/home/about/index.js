@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
 // images
 import about from '../../../assets/images/about.jpg';
 import arrow from '../../../assets/images/arrow.svg';
-import aboutBg from '../../../assets/images/bg/about-bg.svg';
+// import aboutBg from '../../../assets/images/bg/about-bg.svg';
 
-const About = () => {
+const About = forwardRef((props, ref) => {
 	return (
-		<section className="aboutArea">
-			<div className="aboutBg">
+		<section ref={ref} className="aboutArea">
+			{/* <div className="aboutBg">
 				<img src={aboutBg} alt="bg" />
-			</div>
+			</div> */}
 			<div className="aboutImg">
 				<img className="normalImage" src={about} alt="about" />
 				<img className="hoverImage" src={about} alt="about" />
@@ -39,5 +39,5 @@ const About = () => {
 			<h2 className="aboutTitle">Your business is p{/* eople. Our Business is You. */}</h2>
 		</section>
 	);
-};
+});
 export default About;

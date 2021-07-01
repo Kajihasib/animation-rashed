@@ -36,7 +36,7 @@ const videos = [
 const Hero = () => {
 	return (
 		<section className="heroArea">
-			<div className="heroBg"></div>
+			{/* <div className="heroBg"></div> */}
 			<div className="heroContent">
 				<Link className="heroLogo" to="/">
 					<img src={logo} alt="logo" />
