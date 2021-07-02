@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 
 // compoennst
@@ -13,9 +13,11 @@ import Membership from '../../components/home/membership';
 import Horizon from '../../components/home/horizon';
 import Company from '../../components/home/company';
 import Footer from '../../components/footer';
+import aboutBg from '../../assets/images/bg/about-bg.svg';
 import './style.scss'
 const HomePage = () => {
 	const bgRef = useRef();
+	const bg1Ref = useRef();
 	const aboutRef = useRef();
 	useEffect(() => {
 
@@ -26,9 +28,12 @@ const HomePage = () => {
 			bgRef.current.style.background = '#ebfaff';
 			bgRef.current.style.width = '60%';
 		}
+		if(bg1Ref){
+			bg1Ref.current.style.background = `url(${aboutBg})`;
+			bg1Ref.current.style.width = '60%';
+		}
 		document.addEventListener('scroll', function(){
 			const totalVisiable = Math.round(window.pageYOffset+window.innerHeight);
-			console.log(totalVisiable, 'totalVisiable')
 
 			// change bg while visiting about section
 			if(aboutRef){
@@ -36,17 +41,20 @@ const HomePage = () => {
 
 				// check permision to show my magic now
 				if(totalVisiable >= myPosition){
-					bgRef.current.style = '';
-					bgRef.current.style.background = 'red';
+					bgRef.current.style.opacity = '0';
 					bgRef.current.style.width = '100%';
+					bg1Ref.current.style.opacity = '1';
+					bg1Ref.current.style.width = '100%';
 				} else if(totalVisiable <= myPosition){
 					// going back to first section
-					bgRef.current.style.background = '#ebfaff';
+					bgRef.current.style.opacity = '1';
 					bgRef.current.style.width = '60%';
+					bg1Ref.current.style.opacity = '0';
+					bg1Ref.current.style.width = '60%';
 				} else{
 					// rollback for all/default situation
-					bgRef.current.style.background = '#ffffff';
-					bgRef.current.style.width = '100%';
+					bgRef.current.style.opacity = '1';
+					bg1Ref.current.style.opacity = '0';
 				}
 			}
 		})
@@ -59,6 +67,7 @@ const HomePage = () => {
 			</Helmet>
 			<LeftSideMenu />
 			<Header />
+			<div ref={bg1Ref} className="bg-anim"></div>
 			<div ref={bgRef} className="bg-anim"></div>
 			<Hero />
 			<About ref={aboutRef} />
