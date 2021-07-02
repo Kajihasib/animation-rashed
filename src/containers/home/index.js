@@ -54,7 +54,9 @@ const HomePage = () => {
 				} else{
 					// rollback for all/default situation
 					bgRef.current.style.opacity = '1';
+					bgRef.current.style.width = '60%';
 					bg1Ref.current.style.opacity = '0';
+					bg1Ref.current.style.width = '60%';
 				}
 			}
 		})
