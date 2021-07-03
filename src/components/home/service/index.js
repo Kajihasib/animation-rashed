@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
 // images
 import arrow from '../../../assets/images/arrow.svg';
-import serviceBg from '../../../assets/images/bg/service.svg';
+// import serviceBg from '../../../assets/images/bg/service.svg';
 import scrollText from '../../../assets/images/scroll.svg';
 import angleDown from '../../../assets/images/angle-down.svg';
 const service = [
@@ -56,12 +56,12 @@ const service = [
 	},
 ];
 
-const Service = () => {
+const Service = forwardRef((props, ref) => {
 	return (
-		<section className="serviceArea">
-			<div className="serviceBg">
+		<section ref={ref} className="serviceArea">
+			{/* <div className="serviceBg">
 				<img src={serviceBg} alt="bg" />
-			</div>
+			</div> */}
 			<div className="scrollBtn serviceScroll">
 				<img className="scrolText" src={scrollText} alt="text" />
 				<img className="angleText" src={angleDown} alt="angle" />
@@ -91,5 +91,5 @@ const Service = () => {
 			</div>
 		</section>
 	);
-};
+});
 export default Service;
